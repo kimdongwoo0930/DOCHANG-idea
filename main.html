@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도전과창조 실건실제</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(192, 217, 228);
+        }
+        .blind{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow : hidden;
+            clip: rect(0,0,0,0);
+        }
+
+        header {
+            background-color: rgb(192, 217, 228);
+        }
+        a{
+            text-decoration:none;
+            color: white;
+            font-family: Helvetica,Arial,sans-seri;
+        }
+        .left_side_toggle_btn::before{
+            content: "";
+            color: #5882FA;
+            display: inline-block;
+            width: 100px;
+            line-height: 100px;
+            font-size: 50px;
+            text-align: center;
+        }
+        #left_side_btn.left_side_input{
+            display: none;
+        }
+        
+
+        .left_side_input:checked + .left_side_toggle_btn::before{
+            content: "menu";
+            color: white;
+            background-color: #5882FA ;
+            text-align: center;
+            width: 300px;
+        }
+        .left_side_input:checked ~ .left_side_list{
+            left: 0;
+            background-color: #5882FA;
+        }
+        .left_side_list{
+            position: absolute;
+            left: -300px;
+            top: 100px;
+            bottom: 0;
+            background-color: #5882FA;
+            width: 300px;
+            font-size: 23px;
+            transition: 0.3s ease-in;
+            z-index: 2;
+        }
+
+        .left_side_link{
+            display: block;
+            text-align: left;
+            left: -200px;
+            padding: 20px 0;
+            margin-left: 30px;
+        }
+        .left_side_toggle_btn::before{
+            color: #5882FA;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 50px;
+            text-align: center;
+        }
+        #left_side_btn.left_side_input{
+            display: none;
+        }
+
+        .left_side_input:checked + .left_side_toggle_btn::before{
+            content: "";
+            color: white;
+            background-color: #5882FA ;
+            text-align: center;
+            width: 300px;
+        }
+        .left_side_input:checked ~ .left_side_list{
+            left: 0;
+            background-color: #5882FA;
+        }
+        .left_side_list{
+            position: absolute;
+            left: -300px;
+            top: 100px;
+            bottom: 0;
+            background-color: #5882FA;
+            width: 300px;
+            font-size: 23px;
+            transition: 0.3s ease-in;
+            z-index: 2;
+        }
+        .left_side_list > a:hover{
+            color: rgb(1, 0, 255);
+        }
+
+        .left_side_link{
+            display: block;
+            text-align: left;
+            left: -200px;
+            padding: 20px 0;
+            margin-left: 30px;
+        }
+
+
+
+    .right_side_toggle_btn::before{
+        content: '';
+        color: #5882FA;
+        display: inline-block;
+        width: 100px;
+        line-height: 100px;
+        font-size: 50px;
+        text-align: center;
+        position: fixed;
+        right: 100px;
+    }
+    #right_side_btn.right_side_input{
+        display: none;
+    }
+
+    .right_side_input:checked + .right_side_toggle_btn::before{
+        content: "=";
+        color: white;
+        background-color: #5882FA ;
+        text-align: center;
+        width: 350px;
+        right: 0;
+        position: fixed;
+    }
+    .right_side_input:checked ~ .right_side_list{
+        right: 0;
+        background-color: #5882FA;
+        position: absolute;
+    }
+    .right_side_list{
+        position: fixed;
+        right: -350px;
+        top: 100px;
+        bottom: 0;
+        background-color: #5882FA;
+        width: 350px;
+        font-size: 23px;
+        transition: 0.3s ease-in;
+        z-index: 2;
+    }
+
+    .right_side_link{
+        display: block;
+        position: absolute;
+        text-align: left;
+        width: 300px;
+        top: 18%;
+        height: 7px;
+        right: 2%;
+        padding: 20px 0;
+        margin-left: 30px;
+        background-color: #5882FA;
+        border-right: #5882FA 1px solid;
+        border-left: #5882FA 1px solid;
+        border-top: #5882FA 1px solid;
+        border-bottom: white 5px solid;
+        outline: none;
+        color: white;
+        ime-mode: active;
+    }
+    .right_side_link::placeholder{
+        font-size: 250%;
+        color: white;
+    }
+    .search_btn{
+        background-color: #5882FA;
+        position: absolute;
+        top: 16%;
+        right: 3%;
+        width: 50px;
+        height: 50px;
+        padding: 10px 0 0 0;
+        z-index: 1;
+        border: none;
+
+    }
+    .search_btn_img{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        right: 2%;
+        height: 50px;
+    }
+
+
+
+
+
+
+        
+
+
+
+
+
+        .main_01{
+            width: 33%;
+            float: left;
+            height: 500px;
+            opacity: 0.2;
+        }
+        .main_01:hover{
+            opacity: 1;
+        }
+        .main_01:hover > .first_text{
+            color: #5882FA;
+        }
+        .main_02{
+            width: 33%;
+            float: left;
+            height: 500px;
+            opacity: 0.2;
+        }
+        .main_02:hover{
+            opacity: 1;
+            
+        }
+        .main_02:hover > .second_text{
+            color: #5882FA;
+        }
+        .main_03{
+            width: 33%;
+            float: left;
+            height: 500px;
+            opacity: 0.2;
+        }
+        .main_03:hover{
+            opacity: 1;
+        }
+        .main_03:hover > .third_text{
+            color: #5882FA;
+        }
+        #image{
+            margin: 100px 110px 0 130px;
+            height: auto;
+        }
+        .first_img{
+            height: auto;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            z-index: 1;
+        }
+        .second_img{
+            height: auto;
+            position: absolute;
+            top: 20%;
+            left: 42%;
+        }
+        .third_img{
+            height: auto;
+            position: absolute;
+            top: 18%;
+            left: 70%;
+        }
+        .input_form{
+            width: 175px;
+        }
+        .first_input{
+            color: white;
+            outline: none;
+            position: absolute;
+            top: 45%;
+            left: 12%;
+            width: 300px;
+            height: 20px;
+            background-color: #5882FA;
+            border-right: rgb(192, 217, 228) 1px solid;
+            border-left: rgb(192, 217, 228) 1px solid;
+            border-top: rgb(192, 217, 228) 1px solid;
+            border-bottom: rgb(192, 217, 228) 1px solid;
+            z-index: 1;
+        }
+        .second_input{
+            color: white;
+            outline: none;
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            width: 280px;
+            height: 20px;
+            background-color: #5882FA;
+            border-right: rgb(192, 217, 228) 1px solid;
+            border-left: rgb(192, 217, 228) 1px solid;
+            border-top: rgb(192, 217, 228) 1px solid;
+            border-bottom: rgb(192, 217, 228) 1px solid;
+        }
+        .third_input{
+            color: white;
+            outline: none;
+            position: absolute;
+            top: 45%;
+            left: 70%;
+            height: 20px;
+            width: 280px;
+            background-color: #5882FA;
+            border-right: rgb(192, 217, 228) 1px solid;
+            border-left: rgb(192, 217, 228) 1px solid;
+            border-top: rgb(192, 217, 228) 1px solid;
+            border-bottom: rgb(192, 217, 228) 1px solid;
+        }
+        .first_text{
+            font-weight: bold;
+            color: rgb(192, 217, 228);
+            position: absolute;
+            font-size: 200%;
+            top: 50%;
+            left: 5%;
+        }
+        .second_text{
+            font-weight: bold;
+            color: #5882FA;
+            position: absolute;
+            font-size: 200%;
+            color: rgb(192, 217, 228);
+            top: 50%;
+            left: 40%;
+        }
+        .third_text{
+            font-weight: bold;
+            color: #5882FA;
+            position: absolute;
+            font-size: 200%;
+            color: rgb(192, 217, 228);
+            top: 50%;
+            left: 65%;
+        }
+        .third_btn{
+            width: 400px;
+            background-color: rgb(192, 217, 228);
+            height: 400px;
+            border: none;
+        }
+        .search_btn_image{
+            position: fixed;
+            width: 50px;
+            right: 1%;
+            top: 3%;
+        }
+        .search_btn_img_01{
+            position: fixed;
+            width: 50px;
+            left: 1%;
+            top: 3%;
+        }
+        .title{
+            position: absolute;
+            left: 42%;
+            top: -2%;
+            color: #5882FA;
+            font-weight: 1000;
+            font-size: 300%;
+        }
+        .reload{
+            position: absolute;
+            left: 44%;
+            top: 70%;
+            color: #5882FA;
+            font-size: large;
+            font-weight: 700;
+            background-color: rgb(192, 217, 228);
+            border-right: #5882FA 1px solid;
+            border-left: #5882FA 1px solid;
+            border-top: #5882FA 1px solid;
+            border-bottom: #5882FA 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <header class='header'>
+        <input type='checkbox' id = 'left_side_btn' class='left_side_input'>
+        <label for='left_side_btn' class='left_side_toggle_btn'><img src="https://image.flaticon.com/icons/png/512/2311/2311552.png" class="search_btn_img_01" alt="검색버튼"></label>
+        <div class="left_side_list">
+            <a href="" class="left_side_link">   ABOUT US</a>
+            <a href="" class="left_side_link">   ISSUE</a>
+            <a href="" class="left_side_link">   NOTICE</a>
+            <a href="" class="left_side_link">   COVID - 19</a>
+            <a href="" class="left_side_link">   Q & A</a>
+            <a href="" class="left_side_link">   MORE</a>
+        </div>
+        <p class='title'>실건실제</p>
+        <input type='checkbox' id = 'right_side_btn' class='right_side_input'>
+        <label for='right_side_btn' class='right_side_toggle_btn'><img src="https://image.flaticon.com/icons/png/512/71/71403.png" class="search_btn_image" alt="검색버튼"></label>
+        <div class="right_side_list">
+            <form action="" class="search_form">
+                <input type="search" class="right_side_link" placeholder="Search" onfocus="this.placeholder=''" onblur="this.placeholder='Search'" name="search">
+                <button type="submit" class='search_btn'><img src="https://image.flaticon.com/icons/png/512/71/71403.png" class="search_btn_img" alt="검색버튼"></button>
+            </form>
+        </div>
+    </header>
+    <div class="main_01">
+        <img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_2B9D33B30F9317B5E755D7AE963709D0.png" width="350px" class='first_img' alt="알약" id="first_menu">
+        <form action="#" class="input_form">
+            <input type="text" class='first_input' height="50px"id="first_menu">
+        </form>
+        <p class="first_text">가지고 계신 약의 이름은 무엇인가요?</p>
+    </div>
+    <div class="main_02">
+        <img src="https://cdn.pixabay.com/photo/2012/04/25/00/29/germ-41367_960_720.png" width="200px" class="second_img" alt="알약">
+        <form action="#" class="input_form">
+            <input type="text" class='second_input'>
+        </form>
+        <p class="second_text">증상이 무엇인가요?</p>
+    </div>
+    <div class="main_03">
+        <form action="#" class="input_form">
+            <button type="button" class="third_btn" onclick="getValueInput()"><img src="https://img.icons8.com/carbon-copy/452/question-mark.png" width="250px" class="third_img" alt="알약"></button>
+            <input type="text" class='third_input' disabled>
+        </form>
+        <p class="third_text">누르시면 확인하실수 있습니다.</p>
+    </div>
+    <button class="reload"  onClick="window.location.reload()">재검색하기</button>
+    <script> 
+        const getValueInput = () =>{
+          let inputValue1 = document.querySelector(".first_input").value; 
+          let inputValue2 = document.querySelector(".second_input").value; 
+          console.log(inputValue1);
+          console.log(inputValue2);
+
+            let x = document.getElementsByClassName("first_text")[0];
+            let y = document.getElementsByClassName("second_text")[0];
+            let z = document.getElementsByClassName("third_text")[0];
+            let first = document.getElementsByClassName("main_01")[0];
+            let second = document.getElementsByClassName("main_02")[0];
+            let third = document.getElementsByClassName("main_03")[0];
+
+
+
+            x.innerText='가지고 계신 '+inputValue1+'은'; 
+            x.style.left='220px';
+            x.style.color="#5882FA";
+            first.style.opacity = "1.0";
+
+            y.innerText=inputValue2+'에'; 
+            y.style.left='850px';
+            y.style.color="#5882FA";
+            second.style.opacity = "1.0";
+
+          
+            z.innerText='사용할 수 있습니다'; 
+            z.style.left = '1350px'
+            z.style.color="#5882FA";
+            third.style.opacity = "1.0";
+
+        }
+        
+    </script>
+</body>
+</html>
