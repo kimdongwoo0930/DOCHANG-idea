@@ -1,26 +1,32 @@
 ---
+title : Git] GitBlog Chirpy Jekyll 테마 적용하는법
+author:
+    name: 김 동우
+    link: https://github.com/kimdongwoo0930
+date: 2024-01-11 15:45:00 +0900
 categories: [Git,GitBlog]
-tags: [git]
+tags: [Git]
 ---
 
 
 
-## 시작
+# 시작
 
 깃블로그를 만들기위해 여러 플랫폼들중 고민을 많이했다. 그 중 마음에 가장 들었던것은 **GitHub**에서 지원하는 것을 이용해 하는 깃블로그를 하는게 좋아보였다. 내 깃허브에 직접 코드를 올려두고 하면서 직접 커스터마이징도 할 수 있다는 장점이 있어서 깃블로그를 선택했다. 이게 내 깃블로그의 첫 게시글이 될 것이다. 
 
 - 이 글은 MacOS 기준으로 작성되었습니다.
 
+<br/>
 
-
-## 테마 고르기
+# 테마 고르기
 
 먼저 Jekyll에 본다면 많은 테마들이 있다. 그 중 가장 마음에 드는건 Chirpy테마가 가장 마음에 들어서 이 테마로 선택했습니다.
 ![예시](https://camo.githubusercontent.com/8f2b30de2cccca73b48c4a424f0d83a9d2fed609738fa311e3e1f1f6c903e9bf/68747470733a2f2f6368697270792d696d672e6e65746c6966792e6170702f636f6d6d6f6e732f646576696365732d6d6f636b75702e706e67)
 (출처 : https://github.com/cotes2020/jekyll-theme-chirpy)
 
+<br/>
 
-## 준비 작업
+# 준비 작업
 
 Github 페이지는 서버 없이 백그라운드에서 `Jekyll`를 이용해 작동된다. 
 `Jekyll`은 Ruby라는 언어로 개발되었습니다. 이것들을 이용하면 markdown만으로 게시글을 작성할 수 있습니다.
@@ -77,7 +83,7 @@ bundle
 ```
 <br/>
 
-## 로컬에서 테스트하기
+# 로컬에서 테스트하기
 ```bash
 bundle exec jekyll s 
 ```
@@ -85,7 +91,7 @@ bundle exec jekyll s
 
 <br/>
 
-## 깃 블로그 배포하는법
+# 깃 블로그 배포하는법
 1. 배포를 하기위해서는 `_config.yml`에서`url`에 https://[username].github.io 형식을 입력한다.
 <br/>
 2. Github repository에서 **Setting -> Pages -> Build and deployment에서 Source에 있는 Github Actions를 선택** 해주어야 한다.
@@ -112,7 +118,7 @@ bundle exec jekyll s
 <br/>
 <br/>
 
-## 구조 설명
+# 구조 설명
 **_config.yml** : 블로그의 기본 설정 파일입니다. 기본 환경세팅은 모두 여기에서 합니다.
 **_data** : 왼쪽 사이드바와 포스트 하단의 공유하기 버튼등의 구성을 변경할 수 있습니다. 언어 설정에 따라 기본적으로 화면에 나오는 단어들을 변경할 수 있습니다.
 **_include**: 사이드바, toc, 구글애널리틱스, footer, 댓글 등의 대부분의 모듈형으로 삽입되는 UI를 변경할 수 있습니다
