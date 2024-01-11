@@ -1,6 +1,4 @@
 ---
-title : [Git] GitBlog Chirpy Jekyll 테마 적용하는법
-date : 2024-01-11
 categories: [Git,GitBlog]
 tags: [git]
 ---
@@ -14,14 +12,14 @@ tags: [git]
 - 이 글은 MacOS 기준으로 작성되었습니다.
 
 
-#
+
 ## 테마 고르기
 
 먼저 Jekyll에 본다면 많은 테마들이 있다. 그 중 가장 마음에 드는건 Chirpy테마가 가장 마음에 들어서 이 테마로 선택했습니다.
 ![예시](https://camo.githubusercontent.com/8f2b30de2cccca73b48c4a424f0d83a9d2fed609738fa311e3e1f1f6c903e9bf/68747470733a2f2f6368697270792d696d672e6e65746c6966792e6170702f636f6d6d6f6e732f646576696365732d6d6f636b75702e706e67)
 (출처 : https://github.com/cotes2020/jekyll-theme-chirpy)
 
-#
+
 ## 준비 작업
 
 Github 페이지는 서버 없이 백그라운드에서 `Jekyll`를 이용해 작동된다. 
@@ -63,7 +61,6 @@ git clone https://github.com/<username>/<username>.github.io.git
 <br/>
 
 3. 프로젝트 루트 디렉토리로 들어가서 chirpy를 초기화 한다.
-
 ```bash
 bash tools/init
 ```
