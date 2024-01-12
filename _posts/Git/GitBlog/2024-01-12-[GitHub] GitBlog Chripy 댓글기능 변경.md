@@ -71,21 +71,21 @@ Utterances 홈페이지를 내려보면, 중간에 **Configure** 섹션이 나�
 - 전 테마를 dark로 했습니다.
 
 ```html
-<!-- post.html 하단에 추가해주어야한다. -->
+    <!-- post.html 하단에 추가해주어야한다. -->
 
+        </div>
+        <!-- .post-tail-bottom -->
     </div>
-    <!-- .post-tail-bottom -->
-  </div>
-  <!-- div.post-tail-wrapper -->
+    <!-- div.post-tail-wrapper -->
 
-  <!-- Utterances 댓글 스크립트 추가 -->
-  <script src="https://utteranc.es/client.js"
-        repo="kimdongwoo0930/kimdongwoo0930.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+    <!-- Utterances 댓글 스크립트 추가 -->
+    <script src="https://utteranc.es/client.js"
+            repo="kimdongwoo0930/kimdongwoo0930.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
 
 ```
 
