@@ -71,9 +71,8 @@ Utterances 홈페이지를 내려보면, 중간에 **Configure** 섹션이 나�
 - 전 테마를 dark로 했습니다.
 
 ```html
-...
+<!-- post.html 하단에 추가해주어야한다. -->
 
-{% include post-sharing.html lang=lang %}
     </div>
     <!-- .post-tail-bottom -->
   </div>
@@ -87,6 +86,7 @@ Utterances 홈페이지를 내려보면, 중간에 **Configure** 섹션이 나�
         crossorigin="anonymous"
         async>
 </script>
+
 ```
 
 <br/>
